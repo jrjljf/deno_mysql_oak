@@ -6,7 +6,7 @@ const client = await new Client();
 client.connect({
   hostname: "127.0.0.1",
   username: "root",
-  password: "", //需要密码么
+  password: "", 
   db: "",
 });
 //脚本函数创建hello数据表
