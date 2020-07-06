@@ -34,7 +34,6 @@
 
 import {Response } from "https://deno.land/x/oak/mod.ts";
 import HelloModel from "../services/hello.ts";
-import hellos from "../db/hello.ts"
 export default async ({
   params,
   response,
@@ -51,7 +50,6 @@ export default async ({
     id: params.id,
   });
   const msg = data ? `id为${params.id}的数据删除成功` : `id为${params.id}的数据不存在`
-  //const data = hellos.filter(it => it.id = params.id);
   response.status = 200;
-  response.body = { success: true, msg,  };
+  response.body = { success: true, msg};
 };
